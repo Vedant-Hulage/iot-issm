@@ -1,2 +1,2 @@
-# Itelligent Seed Sowing Machine With ML-Based Crop Prediction
+# Intelligent Seed Sowing Machine With ML-Based Crop Prediction
 
