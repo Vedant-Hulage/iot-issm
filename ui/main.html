@@ -1,0 +1,194 @@
+<!--
+    TODO: get data from pico, 
+          send to model,
+          get crop predictions
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pico W Control System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Pico Control</a>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#remote">Remote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Intelligent Seed Sowing Machine with ML-Based Crop Prediction</h1>
+                <p>Monitor sensors, analyze data with ML, and controls your machine remotely</p>
+                <a href="#dashboard" class="cta-button">View Dashboard</a>
+            </div>
+        </section>
+
+        <section id="dashboard" class="container">
+            <div class="dashboard">
+                <div class="dashboard-section">
+                    <h2>Sensor Data</h2>
+                    <div class="sensor-grid">
+                        <div class="sensor-card">
+                            <div class="sensor-value" id="temperature">24.5°C</div>
+                            <div class="sensor-label">Temperature</div>
+                        </div>
+                        <div class="sensor-card">
+                            <div class="sensor-value" id="humidity">65%</div>
+                            <div class="sensor-label">Humidity</div>
+                        </div>
+                        <div class="sensor-card">
+                            <div class="sensor-value" id="pressure">1013 hPa</div>
+                            <div class="sensor-label">Pressure</div>
+                        </div>
+                        <div class="sensor-card">
+                            <div class="sensor-value" id="light">750 lux</div>
+                            <div class="sensor-label">Light</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-section">
+                    <h2>ML Analysis</h2>
+                    <div class="ml-status">
+                        <div class="status-indicator" id="ml-indicator"></div>
+                        <span id="ml-status-text">Model running normally</span>
+                    </div>
+                    <div style="margin-top: 1rem; color: white;">
+                        <p>Prediction: <span id="ml-prediction" style="color: #ffd700;">Normal Operation</span></p>
+                        <p>Confidence: <span id="ml-confidence" style="color: #ffd700;">94.2%</span></p>
+                        <p>Last Updated: <span id="ml-updated" style="color: #ffd700;">Just now</span></p>
+                    </div>
+                </div>
+
+                <div class="dashboard-section remote-section" id="remote">
+                    <h2>Remote Control</h2>
+                    <div class="control-panel">
+                        <div class="joystick-container">
+                            <div class="joystick" id="joystick">
+                                <div class="joystick-knob" id="joystick-knob"></div>
+                            </div>
+                        </div>
+
+                        <div class="control-buttons">
+                            <button class="control-btn" id="start-btn">START</button>
+                            <button class="control-btn" id="stop-btn">STOP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>@2025 Pico W Control System. Built for IoT automation.</p>
+        </div>
+    </footer>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pico W Control System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Pico Control</a>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#remote">Remote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Intelligent Seed Sowing Machine with ML-Based Crop Prediction</h1>
+                <p>Monitor sensors, analyze data with ML, and controls your machine remotely</p>
+                <a href="#dashboard" class="cta-button">View Dashboard</a>
+            </div>
+        </section>
+
+        <section id="dashboard" class="container">
+            <div class="dashboard">
+                <div class="dashboard-section">
+                    <h2>Sensor Data</h2>
+                    <div class="sensor-grid">
+                        <div class="sensor-card">
+                            <div class="sensor-value" id="temperature">24.5°C</div>
+                            <div class="sensor-label">Temperature</div>
+                        </div>
+                        <div class="sensor-card">
+                            <div class="sensor-value" id="humidity">65%</div>
+                            <div class="sensor-label">Humidity</div>
+                        </div>
+                        <div class="sensor-card">
+                            <div class="sensor-value" id="pressure">1013 hPa</div>
+                            <div class="sensor-label">Pressure</div>
+                        </div>
+                        <div class="sensor-card">
+                            <div class="sensor-value" id="light">750 lux</div>
+                            <div class="sensor-label">Light</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-section">
+                    <h2>ML Analysis</h2>
+                    <div class="ml-status">
+                        <div class="status-indicator" id="ml-indicator"></div>
+                        <span id="ml-status-text">Model running normally</span>
+                    </div>
+                    <div style="margin-top: 1rem; color: white;">
+                        <p>Prediction: <span id="ml-prediction" style="color: #ffd700;">Normal Operation</span></p>
+                        <p>Confidence: <span id="ml-confidence" style="color: #ffd700;">94.2%</span></p>
+                        <p>Last Updated: <span id="ml-updated" style="color: #ffd700;">Just now</span></p>
+                    </div>
+                </div>
+
+                <div class="dashboard-section remote-section" id="remote">
+                    <h2>Remote Control</h2>
+                    <div class="control-panel">
+                        <div class="joystick-container">
+                            <div class="joystick" id="joystick">
+                                <div class="joystick-knob" id="joystick-knob"></div>
+                            </div>
+                        </div>
+
+                        <div class="control-buttons">
+                            <button class="control-btn" id="start-btn">START</button>
+                            <button class="control-btn" id="stop-btn">STOP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>@2025 Pico W Control System. Built for IoT automation.</p>
+        </div>
+    </footer>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
